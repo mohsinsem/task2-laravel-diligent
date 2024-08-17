@@ -350,6 +350,16 @@ ul.nav.page-navigation.sub-menu{
 #dataTable_length{
     display: none;
 }
+a.nav-link.active{
+    background: #2b353a0f;
+}
+a.nav-link.active .menu-title{
+    color: #308fd8;
+    font-weight: 500 !important;
+}
+.horizontal-menu .bottom-navbar .page-navigation > .nav-item > .nav-link{
+    padding: 16px 10px;
+}
 /* Media Query */
 @media (min-width: 1200px){
 	.content-wrapper {

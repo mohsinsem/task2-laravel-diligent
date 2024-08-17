@@ -24,13 +24,13 @@
                   <img src="https://via.placeholder.com/40x40" alt="profile"/>
                   <span class="nav-profile-name">Mohsin Shaikh</span>
                 </a>
-                <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="profileDropdown">
+                <!-- <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="profileDropdown">
                   
                   <a class="dropdown-item">
                     <i class="mdi mdi-logout text-primary"></i>
                     Logout
                   </a>
-                </div>
+                </div> -->
               </li>
             </ul>
             <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-toggle="horizontal-menu-toggle">
@@ -43,13 +43,13 @@
         <div class="container">
           <ul class="nav page-navigation">
             <li class="nav-item">
-              <a class="nav-link" href="{{route('provinces.index')}}">
+              <a class="nav-link {{ Route::is('provinces.*') ? 'active' : '' }}" href="{{route('provinces.index')}}">
                 <i class="mdi mdi-home-outline menu-icon"></i>
                 <span class="menu-title">Provinces</span>
               </a>
             </li>
             <li class="nav-item">
-            <a class="nav-link" href="{{route('divisions.index')}}">
+            <a class="nav-link {{ Route::is('divisions.*') ? 'active' : '' }}" href="{{route('divisions.index')}}">
                 <i class="mdi mdi-airplay menu-icon"></i>
                 <span class="menu-title">Divisions</span>
               </a>
@@ -57,7 +57,7 @@
             
             
             <li class="nav-item">
-            <a class="nav-link" href="{{route('provinces.index')}}">
+            <a class="nav-link {{ Route::is('districts.*') ? 'active' : '' }}" href="{{route('districts.index')}}">
                 <i class="mdi mdi-airplay menu-icon"></i>
                 <span class="menu-title">Districts</span>
               </a>

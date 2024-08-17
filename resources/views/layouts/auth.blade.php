@@ -6,7 +6,7 @@
 <!-- Required meta tags -->
 <meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<title>{{$info['name']}} | @yield('title')</title>
+	<title>Test Task</title>
 	<!-- plugins:css -->
 	<link rel="stylesheet" href="{{url('assets/vendors/mdi/css/materialdesignicons.min.css')}}">
 	<link rel="stylesheet" href="{{url('assets/vendors/css/vendor.bundle.base.css')}}">
@@ -133,7 +133,7 @@
 		}
     </script>
 
-<script src="{{ url('public/assets/js/admin/custom.js?v=1.112') }}"></script>
+	<script src="{{ url('assets/js/admin/custom.js') }}"></script>
 	@yield('scripts')
 
 </body>

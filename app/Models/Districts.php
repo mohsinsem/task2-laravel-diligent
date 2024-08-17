@@ -5,24 +5,19 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Divisions extends Model
+class Districts extends Model
 {
     protected $fillable = [
         'name',
-        'province_id',
+        'division_id',
         // Add other attributes as needed
     ];
 
     use HasFactory;
 
      // Define the inverse relationship
-     public function province()
-     {
-         return $this->belongsTo(Provinces::class);
-     }
-
-     public function districts()
-     {
-         return $this->hasMany(Districts::class);
-     }
+    public function division()
+    {
+        return $this->belongsTo(Divisions::class);
+    }
 }

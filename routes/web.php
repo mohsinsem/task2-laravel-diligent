@@ -1,7 +1,9 @@
 <?php
 
+use App\Http\Controllers\Auth\ClientController;
 use App\Http\Controllers\ProvincesController;
 use App\Http\Controllers\DivisionsController;
+use App\Http\Controllers\DistrictsController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Artisan;
 
@@ -20,9 +22,12 @@ use Illuminate\Support\Facades\Artisan;
 //     return view('welcome');
 // });
 
+Route::get('/login', [ClientController::class, 'login']);
+Route::post('/login', [ClientController::class, 'login_submit'])->name('login_submit');
 
 // Provinces
 Route::resource('provinces', ProvincesController::class);
 Route::resource('divisions', DivisionsController::class);
+Route::resource('districts', DistrictsController::class);
 
 

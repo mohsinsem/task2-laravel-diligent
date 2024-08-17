@@ -1,10 +1,10 @@
 @extends('layouts.auth')
 @section('title')
-  {{__('Login Client Panel')}}
+  {{__('Login Panel')}}
 @endsection
 @section('content')
 
-<form action="{{route('client.login_submit')}}" method="post" class="pt-3 validate-form">
+<form action="{{route('login_submit')}}" method="post" class="pt-3 validate-form">
 		<div class="form-group @if($errors->has('email')) error-validation @endif">
 		  <input type="text" class="form-control form-control-lg" name="email" id="email" placeholder="Email" value="{{old('email')}}" required>
 		</div>
