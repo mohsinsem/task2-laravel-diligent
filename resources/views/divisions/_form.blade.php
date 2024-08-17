@@ -16,7 +16,7 @@
                            <select class="form-control form-control-lg select2-single" id="province_id" name="province_id" required="">
                               <option value="">Select Province *</option>
                               @foreach ($provinces as $value)
-                              <option value="{{ $value->id }}">{{ $value->name }}</option>
+                              <option value="{{ $value->id }}"  @if (isset($record)) {{ $record->province_id == $value->id ? 'selected' : '' }} @endif>{{ $value->name }}</option>
                               @endforeach
                            </select>
                         </div>

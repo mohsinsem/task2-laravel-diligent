@@ -1,16 +1,16 @@
 @extends('layouts.client_app')
 @section('title')
-{{trans("Edit Province")}}
+{{trans("Edit Division")}}
 @endsection
 
 @section('content')
 <div class="">
-    <form method="POST" action="{{route('provinces.update',$record['id'])}}"  enctype="multipart/form-data" id="form" >
+    <form method="POST" action="{{route('divisions.update',$record['id'])}}"  enctype="multipart/form-data" id="form" >
         <!-- /.card-header -->
         <div class="" id="main-panel"  data-id="methods">
             @csrf
 			@method('put')
-            @include('provinces._form')
+            @include('divisions._form')
         </div>
     </form>
 </div>

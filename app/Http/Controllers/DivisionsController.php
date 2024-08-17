@@ -68,6 +68,7 @@ class DivisionsController extends Controller
     {
         Divisions::create([
             'name'=>$request->name,
+            'province_id'=>$request->province_id,
         ]);
 
         session()->flash('success', __('Created successfully'));
@@ -94,6 +95,7 @@ class DivisionsController extends Controller
     public function edit($id)
     {
         $data['record'] = Divisions::findOrFail($id);
+        $data['provinces'] = Provinces::all();
         return view('divisions.edit',$data);
     }
 
@@ -109,6 +111,7 @@ class DivisionsController extends Controller
         $record= Divisions::findOrFail($id);
         $record->update([
             'name'=>$request->name,
+            'province_id'=>$request->province_id,
 
         ]);
 

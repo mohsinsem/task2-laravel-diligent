@@ -9,6 +9,7 @@ class Divisions extends Model
 {
     protected $fillable = [
         'name',
+        'province_id',
         // Add other attributes as needed
     ];
 
