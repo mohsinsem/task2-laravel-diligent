@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ProvincesController;
+use App\Http\Controllers\DivisionsController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Artisan;
 
@@ -22,5 +23,6 @@ use Illuminate\Support\Facades\Artisan;
 
 // Provinces
 Route::resource('provinces', ProvincesController::class);
+Route::resource('divisions', DivisionsController::class);
 
 

@@ -19,6 +19,12 @@
 <script src="{{ url('assets/js/tooltips.js') }}"></script>
 <script src="{{ url('assets/vendors/jquery-toast-plugin/jquery.toast.min.js') }}"></script>
 
+<!-- Plugin js for this page-->
+<script src="{{ url('assets/vendors/datatables.net/jquery.dataTables.js') }}"></script>
+<script src="{{ url('assets/vendors/datatables.net-bs4/dataTables.bootstrap4.js') }}"></script>
+
+<!-- Custom js for this page-->
+<script src="{{ url('assets/js/data-table.js') }}"></script>
 
 <!-- End custom js for this page-->
 {{-- sweetalert2 --}}
@@ -31,5 +37,8 @@
 	var baseurl = "/"
 </script>
 <script src="{{ url('assets/js/client/custom.js') }}"></script>
+
+<script src="{{ url('assets/vendors/select2/select2.min.js') }}"></script>
+<script src="{{ url('assets/js/select2.js') }}"></script>
 
 

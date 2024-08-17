@@ -15,6 +15,13 @@
 
   @yield('css')
 
+  
+  <link rel="stylesheet" href="{{ url('assets/vendors/select2/select2.min.css') }}">
+  <link rel="stylesheet" href="{{ url('assets/vendors/select2-bootstrap-theme/select2-bootstrap.min.css') }}">
+  <link rel="stylesheet" href="{{ url('assets/vendors/bootstrap-datepicker/bootstrap-datepicker.min.css') }}">
+  
+
+
   <link rel="stylesheet" href="{{url('assets/css/client-panel/style.css')}}">
   <link rel="stylesheet" href="{{url('assets/css/client-panel/custom.css?v=1.2')}}">
   <!-- endinject -->
@@ -22,6 +29,8 @@
 
   <!-- plugin css for this page -->
   <link rel="stylesheet" href="{{url('assets/vendors/jquery-toast-plugin/jquery.toast.min.css')}}" />
+
+  
 @stack('css')
 
 

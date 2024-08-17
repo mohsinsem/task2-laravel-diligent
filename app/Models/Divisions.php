@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Provinces extends Model
+class Divisions extends Model
 {
     protected $fillable = [
         'name',
@@ -14,9 +14,9 @@ class Provinces extends Model
 
     use HasFactory;
 
-     // Define the relationship
-     public function divisions()
+     // Define the inverse relationship
+     public function province()
      {
-         return $this->hasMany(Division::class);
+         return $this->belongsTo(Provinces::class);
      }
 }

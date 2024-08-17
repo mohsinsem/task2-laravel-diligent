@@ -12,9 +12,10 @@
             "searching": false,
             "iDisplayLength": 50,
             "ajax": {
-                url: "provinces",
+                url: "divisions",
                 data: function (data) {
                     data.filter_pname = $('#filter_pname').val();
+                    data.province_id = $('#province_id').val();
                 }
             },
             // orderCellsTop: true,
@@ -22,6 +23,7 @@
             "columns": [
                 { data: "id" },
                 { data: "name" },
+                { data: "province_name" },
                 { data: "created_at" },
                 { data: "action" },
             ],
@@ -65,6 +67,9 @@
     $('#filter_pname').on('input', function () {
 		table.draw();
     });
+    $('#province_id').on('change', function () {
+		table.draw();
+    });
    
 
     if ($("#form").length) {
@@ -77,7 +82,7 @@
             },
             messages: {
                 name: {
-                    required: "Please enter province name",
+                    required: "Please enter division name",
                 }
             },
             errorPlacement: function(label, element) {
@@ -95,7 +100,7 @@
         e.preventDefault();
         var el = $(this);
         swal.fire({
-            title: "Are you sure to delete province ?",
+            title: "Are you sure to delete division ?",
             type: "warning",
             showCancelButton: true,
             confirmButtonClass: "btn-danger",
